@@ -1,4 +1,4 @@
-![Logo](/public\favicon\ms-icon-150x150.png)
+![Logo](/public/favicon/ms-icon-150x150.png)
 
 # Description
 This DApp can help you in the conducting Airdrop on Ethereum network via mass sender, multi sender, bulk token sending features.
