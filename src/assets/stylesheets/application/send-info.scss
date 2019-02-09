@@ -1,0 +1,19 @@
+.send-info {
+  word-wrap: break-word;
+  overflow: hidden;
+
+  &-side {
+    float: left;
+    width: 50%;
+  }
+
+  &-i {
+    margin-bottom: 20px;
+  }
+
+  &-amount {
+    margin-top: 10px;
+    color: #0e00ff;
+    font-size: 20px;
+  }
+}

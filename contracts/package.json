@@ -1,0 +1,38 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flattenUpgradebleSender": "./node_modules/.bin/truffle-flattener contracts/bulktokensending/UpgradebleSender.sol > flats/UpgradebleSender_flat.sol",
+    "flattenEternalStorageProxyForBulkTokenSending": "./node_modules/.bin/truffle-flattener contracts/EternalStorageProxyForBulkTokenSending.sol > flats/EternalStorageProxyForBulkTokenSending_flat.sol",
+    "testmigrate": "set TOOL_NODE_FLAGS=--max-old-space-size=2047&& \"node_modules/.bin/truffle\" migrate --network=testganache",
+    "compile": "node_modules/.bin/truffle compile",
+    "testsol": "set TOOL_NODE_FLAGS=--max-old-space-size=2047&& \"node_modules/.bin/truffle\" test --network=testganache",
+    "startganache": "ganache-cli --account=\"0x7a115f9671150008c0543b5cb208a812631e4730add664c4f24d6980ce60c835,950000000000000000000000000000\" --account=\"0x53ac8bdaed2e1264b09fac52bf0b2e84b0eea4bdeb0390aed19b24a285fb9cc3,950000000000000000000000000000\" --account=\"0xff15a3fb13e8f1ca9c692450bdd8b10137a4fda942ffad8b123757b601c44b08,950000000000000000000000000000\" --account=\"0x27491d382113c38543a9409601792922b829737a0d1fe087be3d1781da23763b,950000000000000000000000000000\" --account=\"0xfd9bc85f04a5907f47bb48d3ca33a0862e87d04a62854c1f10d9646b9e7c3d43,950000000000000000000000000000\" --account=\"0xa15ae89e60e9c9fbb68bf434971aae9f2e23a7055eb29bd767e7cffd5092ef51,950000000000000000000000000000\" --account=\"0xf21aadc2b1faaa736bbb07d55a1777736b1405baec85a8bec1f467bcd0d427dd,950000000000000000000000000000\" --account=\"0x2b4a77cedde9965c29dfe4d48269f9eda33fb18d269318bd37a1d0538b8ee168,950000000000000000000000000000\" --account=\"0x0a7ecebd7250644fd3aed8fd4a3ecd6cb56e26d66e690d906e17982aa7e428e9,950000000000000000000000000000\" --account=\"0xc4c26269f594a3f8c7a149177fe8927592f806715ceeeb7a2ebbd8ec11b2a9d3,950000000000000000000000000000\" -n -u 0 -u 1 -u 2 -u 3 -u 4 -u 5 -u 6 -u 7 -u 8 -u 9 --gasLimit 100000000000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "^4.1.7",
+    "web3": "^1.0.0-beta.18",
+    "web3-provider-engine": "^13.2.9"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "babel-register": "^6.23.0",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
+    "chai-bignumber": "^2.0.0",
+    "coveralls": "^2.13.1",
+    "ganache-cli": "^6.0.3",
+    "mocha-lcov-reporter": "^1.3.0",
+    "solidity-coverage": "^0.5.11",
+    "truffle-flattener": "^1.2.3",
+    "truffle-hdwallet-provider": "0.0.3"
+  }
+}

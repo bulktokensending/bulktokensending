@@ -1,0 +1,27 @@
+.header {
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid fade-out(#95d5ff, 0.9);
+
+  @media (max-width: $mobile--width) {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    @extend %flex-between;
+    align-items: center;
+  }
+
+  &-logo {
+    background-image: url('../images/logo.png');
+    background-size: contain;
+    display: block;
+    width: 200px;
+    height: 36px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $container-responsive--width) {
+      width: 36px;
+    }
+  }
+}
